@@ -10,6 +10,22 @@ const classMap = {
   "186fcf0b-b8d6-44ce-8e4c-31dcbea5cd9c": "XI-B2"
 };
 
+function formatTanggal(isoString) {
+  const date = new Date(isoString);
+  // Menggunakan Intl.DateTimeFormat untuk format yang rapi
+  return new Intl.DateTimeFormat('id-ID', {
+    day: '2-digit',
+    month: 'short',
+    year: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false // Gunakan format 24 jam
+  }).format(date).replace(/\./g, ':'); // Mengganti titik jadi titik dua jika perlu
+}
+
+// Contoh Penggunaan:
+const created_at = "2026-02-04 01:53:28.14688+00";
+console.log(formatTanggal(created_at)); // Hasil: 04 Feb 26 08:53 (WIB otomatis)
 // helper kapitalisasi nama
 function capitalize(text) {
   return text
@@ -44,7 +60,7 @@ fetch(`${SUPABASE_URL}/rest/v1/students?select=*`, {
       <td>${student.nis}</td>
       <td>✅ ${capitalize(student.name)}</td>
       <td>${classMap[student.class_id] || "Tidak diketahui"}</td>
-      <td>${student.created_at}</td>
+      <td>${formatTanggal(student.created_at)}</td>
     `;
 
     tbody.appendChild(row);
@@ -59,6 +75,7 @@ fetch(`${SUPABASE_URL}/rest/v1/students?select=*`, {
   `;
 
 });
+
 
 
 
