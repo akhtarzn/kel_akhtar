@@ -1,12 +1,13 @@
-const SUPABASE_URL = "https://psimaoheadjgoxhpwxrn.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzaW1hb2hlYWRqZ294aHB3eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkwNTc3MTAsImV4cCI6MjA4NDYzMzcxMH0.vzAlZl22Uqr02WhFpEC98Ud5F4cwA7Qwuj_tDpuj4O4";
+const SUPABASE_URL = "https://vkcgirfabwquzumgsvgy.supabase.co";
+//const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzaW1hb2hlYWRqZ294aHB3eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkwNTc3MTAsImV4cCI6MjA4NDYzMzcxMH0.vzAlZl22Uqr02WhFpEC98Ud5F4cwA7Qwuj_tDpuj4O4";
+const SUPABASE_KEY = "sb_publishable_YSnSFpK1kgADoDDDBPjoCA_33V0lMlc";
 
 const tbody = document.getElementById("data-siswa");
 
 // contoh mapping kelas
 const classMap = {
-  "dbd0c540-31d4-4d26-9650-81d2327b8b00": "XI-C1",
-  "281a8307-2387-4e3a-aea3-d60e01c9ae0d": "XI-C2"
+  "32152e9d-96d0-45b2-8dff-95eb184d0a69": "XI-B1",
+  "186fcf0b-b8d6-44ce-8e4c-31dcbea5cd9c": "XI-B2"
 };
 
 // helper kapitalisasi nama
@@ -39,6 +40,7 @@ fetch(`${SUPABASE_URL}/rest/v1/students?select=*`, {
 
     row.innerHTML = `
       <td>${index + 1}</td>
+      <td>${student.nisn}</td>
       <td>${student.nis}</td>
       <td>✅ ${capitalize(student.name)}</td>
       <td>${classMap[student.class_id] || "Tidak diketahui"}</td>
@@ -57,6 +59,7 @@ fetch(`${SUPABASE_URL}/rest/v1/students?select=*`, {
   `;
 
 });
+
 
 
 
