@@ -1,6 +1,8 @@
+body, table, th, td {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-  font-family: Poppins, sans-serif;
-  /* background-color: #f4f6f8; */
   background: linear-gradient(180deg, #6a5af9 0%, #d66efd 100%);
   min-height: 100vh;
   margin: 0;
@@ -67,6 +69,7 @@ tr:hover {
   background-color: #f1edff;
   transition: 0.3s;
 }
+
 
 
 
