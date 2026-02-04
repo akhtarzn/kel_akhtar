@@ -70,8 +70,17 @@ tr:hover {
   transition: 0.3s;
 }
 
+footer {
+  text-align: center;
+  font-size: 0.75rem; /* Ukuran kecil */
+  color: rgba(255, 255, 255, 0.7); /* Putih transparan agar tidak terlalu mencolok */
+  margin-top: 50px; /* Memberi jarak dari tabel */
+  padding-bottom: 20px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
 
-
-
-
-
+footer strong {
+  font-weight: 600;
+  color: white; /* Nama kamu dibuat sedikit lebih terang */
+}
