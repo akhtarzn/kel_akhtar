@@ -1,0 +1,62 @@
+body {
+  font-family: Poppins, sans-serif;
+  /* background-color: #f4f6f8; */
+  background: linear-gradient(180deg, #6a5af9 0%, #d66efd 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  color: #333;
+  border-radius: 15px; /* Tambahan: sudut sedikit melengkung */
+  overflow: hidden;    /* Agar lengkungan terlihat */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+  /* border: 1px solid #ccc; */
+  padding: 15px 20px;
+  text-align: left;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa; 
+  color: #6a5af9;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+tr:last-child td {
+  border-bottom: none; /* Menghilangkan garis di baris terakhir */
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #f1edff;
+  transition: 0.3s;
+}
+
+
+
