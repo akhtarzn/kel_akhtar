@@ -19,7 +19,7 @@ const lessonMap = {
   "3cbf6105-a428-427d-bcf8-bfa9b739cc44": "Wali Kelas",
   "55785470-1ff0-45f6-9c9e-8856e9f79580": "Kimia",
   "ec81b04b-0362-4bae-8b6e-6895722fb929": "Fisika",
-  "10d4199e-8572-40c3-b02a-9b681e2d96fb": "Bahasa Inggris,
+  "10d4199e-8572-40c3-b02a-9b681e2d96fb": "Bahasa Inggris",
   "f85bc864-3d2e-40f8-9e8c-a3643988da30": "Bahasa Indonesia"
 };
 
