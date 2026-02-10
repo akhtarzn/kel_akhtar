@@ -76,9 +76,7 @@ fetch(`${SUPABASE_URL}/rest/v1/students?select=*`, {
   }
 })
 .then(response => {
-  if (!response.ok) {
-    throw new Error("Gagal mengambil data dari Supabase");
-  }
+  if (!response.ok) throw new Error("Gagal mengambil data");
   return response.json();
 })
 .then(students => {
@@ -89,6 +87,8 @@ fetch(`${SUPABASE_URL}/rest/v1/students?select=*`, {
   console.error(error);
   tbody.innerHTML = `<tr><td colspan="6">Data gagal dimuat</td></tr>`;
 });
+
+// Event Listener untuk Pencarian
 searchInput.addEventListener("input", (e) => {
   const keyword = e.target.value.toLowerCase();
 
