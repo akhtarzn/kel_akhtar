@@ -1,52 +1,91 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>MYSCHOOL - Data Siswa</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>MYSCHOOL - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <h1>👨 Daftar Siswa 👩</h1>
-  <h3>SMA HANG TUAH 2 Sidoarjo</h3>
-  <p class="subtitle">✨ Tugas Akhir TIK oleh: Muhammad Akhtar Razaan (XI-C1) ✨</p>
+<body class="bg-slate-50 text-slate-800 font-sans">
 
-  <div class="search-container">
-    <input type="text" id="search-input" placeholder="Cari Nama, NISN, atau Kelas...">
-  </div>
-  
-  <table>
-    <thead>
-      <tr>
-        <th>✨ No</th>
-        <th>🔖 NISN</th>
-        <th>🎖️ NIS</th>
-        <th>😊 Nama</th>
-        <th>💎 Kelas</th>
-        <th>⌚ Created</th>
-      </tr>
-    </thead>
-    <tbody id="data-siswa">
-      <!-- Data dari JavaScript -->
-    </tbody>
-  </table>
-  
-  <div class="pagination-container">
-    <button id="prev-btn">⬅️ Sebelumnya</button>
-    <span id="page-info">Halaman 1</span>
-    <button id="next-btn">Selanjutnya ➡️</button>
-  </div>
-  
-  <script src="students.js"></script>
+    <header class="py-10 text-center bg-white border-b border-slate-200 shadow-sm">
+        <h1 class="text-4xl font-bold mb-2">⭐ Dashboard Akademik ⭐</h1>
+        <h3 class="text-xl text-slate-600">SMA HANG TUAH 2 Sidoarjo</h3>
+        <p class="text-sm text-blue-500 mt-2 font-medium">✨ Tugas Akhir TIK oleh: Muhammad Akhtar Razaan (XI-C1) ✨</p>
+    </header>
 
-  <footer>
-    Copyright &copy; 2026. Build with passion by <strong>@akhtarzn</strong>.
-  </footer>
+    <main class="max-w-6xl mx-auto px-6 py-10">
+
+        <div class="mb-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-blue-700">
+            <p>Selamat datang di sistem <strong>MYSCHOOL</strong>. Silakan pilih menu di bawah untuk melihat data lengkap.</p>
+        </div>
+
+        <section id="stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <a href="teachers.html" class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-1 hover:border-blue-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 font-medium">👨‍🏫 Total Guru</p>
+                        <p class="text-4xl font-black text-blue-600 mt-2" id="teachers">--</p>
+                    </div>
+                    <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🎓</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 italic">Klik untuk detail guru &rarr;</p>
+            </a>
+
+            <a href="students.html" class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-1 hover:border-emerald-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 font-medium">😊 Total Siswa</p>
+                        <p class="text-4xl font-black text-emerald-600 mt-2" id="students">--</p>
+                    </div>
+                    <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🎒</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 italic">Klik untuk daftar siswa &rarr;</p>
+            </a>
+
+            <a href="classes.html" class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-1 hover:border-purple-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 font-medium">💎 Total Kelas</p>
+                        <p class="text-4xl font-black text-purple-600 mt-2" id="classes">--</p>
+                    </div>
+                    <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🏛️</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 italic">Lihat distribusi kelas &rarr;</p>
+            </a>
+
+            <a href="lessons.html" class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-1 hover:border-orange-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 font-medium">📚 Mata Pelajaran</p>
+                        <p class="text-4xl font-black text-orange-600 mt-2" id="lessons">--</p>
+                    </div>
+                    <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">📖</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 italic">Daftar mata pelajaran &rarr;</p>
+            </a>
+
+            <a href="lesson_schedule.html" class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-1 hover:border-rose-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 font-medium">⌚ Total Jadwal</p>
+                        <p class="text-4xl font-black text-rose-600 mt-2" id="schedules">--</p>
+                    </div>
+                    <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🗓️</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 italic">Lihat jadwal harian &rarr;</p>
+            </a>
+
+        </section>
+    </main>
+
+    <footer class="text-center py-10 text-slate-400 text-sm">
+        Copyright &copy; 2026. Build with passion by <strong class="text-slate-600">@akhtarzn</strong>.
+    </footer>
+
+    <script src="dashboard.js"></script>
 </body>
 </html>
-
-
-
-
-
-
