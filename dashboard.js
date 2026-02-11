@@ -25,7 +25,7 @@ async function fetchDashboardData() {
     fetch(`${SUPABASE_URL}/rest/v1/teachers?select=id`, { headers: HEADERS }),
     fetch(`${SUPABASE_URL}/rest/v1/students?select=id`, { headers: HEADERS }),
     fetch(`${SUPABASE_URL}/rest/v1/classes?select=id`, { headers: HEADERS }),
-    fetch(`${SUPABASE_URL}/rest/v1/lessons?select=id`, { headers: HEADERS }),
+    fetch(`${SUPABASE_URL}/rest/v1/lesson?select=id`, { headers: HEADERS }),
     fetch(`${SUPABASE_URL}/rest/v1/lesson_schedule?select=id`, { headers: HEADERS })
   ]);
 
